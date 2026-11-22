@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template # Flask 웹 프레인워크 모듈 불러오
 
 app = Flask(__name__)
 
@@ -31,8 +31,8 @@ def index():
     return template(getContents(), '<h2>Welcome</h2>Hello, WEB')
 
 
-@app.route('/create/')
-def create():
+@app.route('/create/') # /create/ 경로로의 요청이 들어오면
+def create():          # create()를 실행
     return 'Create'
 
 @app.route('/read/<int:id>/')
