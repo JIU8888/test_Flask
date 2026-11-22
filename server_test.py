@@ -47,4 +47,4 @@ def read(id):
     return template(getContents(), f'<h2>{title}</h2>{body}')
 
 if __name__ == '__main__':
-    app.run()
+    app.run()                # 웹 서버를 구동
